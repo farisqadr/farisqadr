@@ -1,7 +1,5 @@
-- 👋 Hi, I’m @farisqadr
-- 👀 I’m interested in Flutter Mobile Apps Development
-- 🌱 I’m currently learning Flutter
-- 💞️ I’m looking to collaborate on Flutter Project
+- 👋 Hi, I’m Faris
+- 👀 I’m Web 3 Enthusiast
 - 📫 How to reach me: send mail to faris.code@gmail.com thanks!
 
 <!---
