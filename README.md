@@ -1,11 +1,3 @@
-| | () | | | | | | | _ \ | |
-| | _ __ _ _ __ | | | | ___ | | ___ | |) | ___ _ _ __| | ___ _ __
-| || ' | | ' | / | ' \ / _ \ | / _ \ | _ < / _ | | | |/ | |/ _ \ '|
-| || | | | | | | | || (| | | | __/ | || __/ | |) | () | || | (__| | / |
-||| |||| ||___|| ||_| ___| |/ ___/ _,|_||___||
-
-![Faris Blockchain Logo](https://raw.githubusercontent.com/faris-code/assets/main/cli-blockchain-logo.png)
-
 ## 👋 About Me
 
 Hi, I'm **Faris Abdurrahman**—a seasonal blockchain developer and a product manager with 5+ years experience across Web3, NFT, RWA, and AI-powered products.
@@ -41,9 +33,9 @@ I love building scalable, innovative solutions for real-world business cases, wi
 
 > See more at [s.id/faris-project](https://s.id/faris-project)
 
-- **Kolektiva RWA** (Asset Tokenization Platform)
-- **NFT AI Context Embedding** (NFT Minting, Vector AI)
-- **AI Attendance App** (QR/geofence, LLM integration)
+- **Kolektiva RWA** (Fractional Real Estate Investment and Tokenization Platform)
+- **NFT AI Context Embedding** (NFT Minting, Vector AI Embedding)
+- **AI Attendance App** (QR/Geofence, LLM integration)
 - **Wool AI WhatsApp Bot** (Gemini API)
 
 ## 🔗 Skills
