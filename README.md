@@ -46,9 +46,9 @@ I love building scalable, innovative solutions for real-world business cases, wi
 - Cross-functional Collaboration
 - Strategic Planning & Partnership
 
-╭──────────────────────────────────╮
-│  Web3 | NFT | RWA | AI Powered   │
-╰──────────────────────────────────╯
++----------------------------------+
+|  Web3 | NFT | RWA | AI Powered  |
++----------------------------------+
 
 ---
 
