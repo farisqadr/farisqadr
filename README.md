@@ -23,11 +23,8 @@ I love building scalable, innovative solutions for real-world business cases, wi
 ## 🏆 Experience Highlights
 
 - **PM, Manexus Pte. Ltd (2024–Present)**  
-  Web3, Blockchain, AI, RWA, NFT | ETH SEA Hackathon Winner  
-  ⦿ Led product architecture and delivery for 3 Web3 products and client projects.
-
-- **Hackathon Winner, ETH SEA 2024**  
-  Top 2 for Real World Asset dApp.
+  Web3, Blockchain, AI, RWA, NFT | ETH SEA
+  Led product architecture and delivery for Web3 products and client projects.
 
 ## 🚀 Recent Projects
 
