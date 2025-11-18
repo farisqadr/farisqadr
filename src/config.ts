@@ -1,4 +1,7 @@
-import thumbnail1 from "./assets/kolektiva2.png";
+import thumbnail0 from "./assets/thumbnail0.png";
+import thumbnail1 from "./assets/thumbnail1.png";
+import thumbnail2 from "./assets/thumbnail2.png";
+import thumbnail3 from "./assets/thumbnail3.png";
 
 export const siteConfig = {
   name: "Faris Abdurrahman",
@@ -24,10 +27,19 @@ export const siteConfig = {
     "Confluence"
   ],
   projects: [
+
+    {
+      name: "AI Attendance App",
+      description:
+        "AI-powered attendance application streamlining student attendance management. Features QR code check-ins, geofencing validation, and AI-driven leave request analysis based on predefined criteria and behavioral patterns.",
+      link: "https://manexus.xyz",
+      skills: ["Product Management", "AI/ML", "React", "Node.js"],
+      thumbnail: thumbnail0,
+    },
     {
       name: "Wool",
       description:
-        "End-to-end talent profiling and talent management platform empowering job seekers and companies. Features include assessment platform, schedule management, resume builder, job portal, and talent pool for efficient candidate-company matchmaking.",
+        "End-to-end profiling assessment and talent management platform empowering job seekers and companies. Features include assessment platform, schedule management, resume builder, job portal, and talent pool for efficient candidate-company matchmaking.",
       link: "https://wool.id",
       skills: ["Product Management", "TypeScript", "React", "Node.js"],
       thumbnail: thumbnail1,
@@ -38,15 +50,7 @@ export const siteConfig = {
         "Web3 platform for tokenizing and trading fractional real-world assets such as real estate properties and villas. Enables fractional investment through asset tokenization, making investment accessible to a wider audience.",
       link: "https://manexus.xyz",
       skills: ["Product Management", "Web3","Blockchain", "Solidity"],
-      thumbnail: thumbnail1,
-    },
-    {
-      name: "AI Attendance App",
-      description:
-        "AI-powered attendance application streamlining student attendance management. Features QR code check-ins, geofencing validation, and AI-driven leave request analysis based on predefined criteria and behavioral patterns.",
-      link: "https://manexus.xyz",
-      skills: ["Product Management", "AI/ML", "React", "Node.js"],
-      thumbnail: thumbnail1,
+      thumbnail: thumbnail2,
     },
     {
       name: "Tenzro NFT",
@@ -54,16 +58,16 @@ export const siteConfig = {
         "AI-driven NFT platform redefining digital asset value and management. Features AI context embedding for enriched metadata, NFT minting, drops, marketplace, and comprehensive asset management tools.",
       link: "https://manexus.xyz",
       skills: ["Product Management", "Web3", "AI", "NFT"],
-      thumbnail: thumbnail1,
+      thumbnail: thumbnail3,
     },
-    {
-      name: "Wool AI Chatbot",
-      description:
-        "Next-generation WhatsApp chatbot powered by Large Language Models through Gemini API. Delivers intelligent conversations for support, product sales, and early-stage user engagement.",
-      link: "https://#",
-      skills: ["AI", "n8n", "LLM", "Gemini API"],
-      thumbnail: thumbnail1,
-    },
+    // {
+    //   name: "Wool AI Chatbot",
+    //   description:
+    //     "Next-generation WhatsApp chatbot powered by Large Language Models through Gemini API. Delivers intelligent conversations for support, product sales, and early-stage user engagement.",
+    //   link: "https://#",
+    //   skills: ["AI", "n8n", "LLM", "Gemini API"],
+    //   thumbnail: thumbnail1,
+    // },
   ],
   experience: [
     {
