@@ -5,7 +5,7 @@ import thumbnail3 from "./assets/thumbnail3.png";
 
 export const siteConfig = {
   name: "Faris Abdurrahman",
-  title: "Product and Project Manager",
+  title: ["Product Manager", "Project Manager", "Head of Product & Technology"],
   description: "Portfolio website of Faris Abdurrahman - Product and Project Manager with 5+ years of experience",
   accentColor: "#1d4ed8",
   social: {
@@ -23,6 +23,8 @@ export const siteConfig = {
     "Business Analysis",
     "Product Growth",
     "Web3",
+    "Blockchain",
+    "AI",
     "Jira",
     "Confluence"
   ],
@@ -77,7 +79,7 @@ export const siteConfig = {
       bullets: [
         "Secured 2nd place at ETH Southeast Asia Hackathon during Coinfest Asia, Bali 2024, showcasing innovation and technical expertise",
         "Led coordination with remote, cross-cultural team of 9 members, driving effective communication and collaboration across geographies",
-        "Executed product research, prioritized feature development, and reviewed architecture, UI, and quality standards for 3+ products",
+        "Executed product research, prioritized feature development, designed architecture, UIUX analysis, and quality standards for 3+ products",
         "Delivered persuasive presentations to stakeholders, pitched to potential clients, investors, and strategic partners",
       ],
     },
@@ -155,4 +157,15 @@ export const siteConfig = {
       ],
     },
   ],
+  gallery: {
+    title: "Gallery",
+    images: [
+      { src: thumbnail0, alt: "AI Attendance App" },
+      { src: thumbnail1, alt: "Wool Platform" },
+      { src: thumbnail2, alt: "Kolektiva RWA" },
+      { src: thumbnail3, alt: "Tenzro NFT" },
+      { src: thumbnail0, alt: "AI Attendance App" },
+      { src: thumbnail1, alt: "Wool Platform" },
+    ],
+  },
 };

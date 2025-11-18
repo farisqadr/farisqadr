@@ -143,12 +143,16 @@ import { siteConfig } from "../config";
           id="typed-name"
           style={{ color: siteConfig.accentColor }}
           data-text={siteConfig.name}
-        ></span><span class="typing-cursor">|</span>
+        ></span><span id="name-cursor" class="typing-cursor">|</span>
       </h1>
       <p
         class="mt-4 sm:mt-6 md:mt-8 text-pretty text-base sm:text-lg md:text-xl/8 font-medium text-gray-600 animate-fade-in animation-delay-400"
       >
-        {siteConfig.title}
+      <span
+          id="typed-title"
+          class="text-gray-600"
+          data-text={JSON.stringify(siteConfig.title)}
+        ></span><span class="typing-cursor">|</span>
       </p>
     </div>
   </div>
@@ -323,34 +327,74 @@ import { siteConfig } from "../config";
 
   .typing-cursor.hide {
     opacity: 0;
+    animation: none;
   }
 </style>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const typedElement = document.getElementById("typed-name");
-    const cursor = document.querySelector(".typing-cursor");
+    const typedNameElement = document.getElementById("typed-name");
+    const typedTitleElement = document.getElementById("typed-title");
+    const nameCursor = document.getElementById("name-cursor");
 
-    if (!typedElement || !cursor) return;
+    if (!typedNameElement || !typedTitleElement || !nameCursor) return;
 
-    const text = typedElement.getAttribute("data-text") || "";
+    const text1 = typedNameElement.getAttribute("data-text") || "";
+    const titlesData = typedTitleElement.getAttribute("data-text") || "[]";
+    const titles = JSON.parse(titlesData);
     const typingSpeed = 100; // milliseconds per character
+    const deletingSpeed = 50; // milliseconds per character when deleting
+    const pauseAfterTyping = 2000; // pause after typing a title
+    const pauseAfterDeleting = 500; // pause after deleting a title
 
-    let charIndex = 0;
+    let charIndex1 = 0;
+    let currentTitleIndex = 0;
 
     // Wait for the fade-in animation to start (200ms delay)
     setTimeout(() => {
+      // First, type the name
       const typeNextChar = () => {
-        if (charIndex < text.length) {
-          typedElement.textContent += text.charAt(charIndex);
-          charIndex++;
+        if (charIndex1 < text1.length) {
+          typedNameElement.textContent += text1.charAt(charIndex1);
+          charIndex1++;
           setTimeout(typeNextChar, typingSpeed);
         } else {
-          // Hide cursor after typing is complete
-          setTimeout(() => {
-            cursor.classList.add("hide");
-          }, 500);
+          // After name is typed, hide the name cursor and start the title loop
+          nameCursor.classList.add("hide");
+          setTimeout(typeTitleLoop, 200);
         }
+      };
+
+      const typeTitleLoop = () => {
+        const currentTitle = titles[currentTitleIndex];
+        let charIndex = 0;
+
+        // Type the current title
+        const typeTitle = () => {
+          if (charIndex < currentTitle.length) {
+            typedTitleElement.textContent += currentTitle.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeTitle, typingSpeed);
+          } else {
+            // After typing complete, pause then start deleting
+            setTimeout(deleteTitle, pauseAfterTyping);
+          }
+        };
+
+        // Delete the current title
+        const deleteTitle = () => {
+          if (typedTitleElement.textContent.length > 0) {
+            typedTitleElement.textContent = typedTitleElement.textContent.slice(0, -1);
+            setTimeout(deleteTitle, deletingSpeed);
+          } else {
+            // Move to next title
+            currentTitleIndex = (currentTitleIndex + 1) % titles.length;
+            // After deleting complete, pause then start typing next title
+            setTimeout(typeTitleLoop, pauseAfterDeleting);
+          }
+        };
+
+        typeTitle();
       };
 
       typeNextChar();
