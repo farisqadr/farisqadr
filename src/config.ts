@@ -2,68 +2,64 @@ import thumbnail1 from "./assets/kolektiva2.png";
 
 export const siteConfig = {
   name: "Faris Abdurrahman",
-  title: "Senior Product Manager",
+  title: "Product and Project Manager",
   description: "Portfolio website of Faris Abdurrahman - Product Manager with 5+ years of experience",
   accentColor: "#1d4ed8",
   social: {
     email: "farisabdurrahman@icloud.com",
     linkedin: "https://www.linkedin.com/in/faris-abdurrahman/",
     twitter: "",
-    github: "https://s.id/faris-project",
+    github: "",
   },
   aboutMe:
-    "Result driven Product & Project Manager with 5+ years of experience leading innovation in web and app development. Successfully delivered 20+ cross-industry projects by translating business needs into actionable product requirements and driving measurable gains in efficiency and effective speed. Experienced in aligning diverse teams, utilizing productivity tools, and managing stakeholders toward product vision and growth. Strong expertise in Product Discovery, Go-to-Market Strategy, and Agile Project Management.",
+    "Result driven Product & Project Manager with 5+ years of experience leading innovation in web and app development. Successfully delivered 20+ cross-industry projects by translating business needs into actionable product requirements and driving measurable gains in efficient speed. Experienced in aligning diverse teams, utilizing AI productivity tools, and managing stakeholders toward growth product vision. Strong expertise in Product Discovery, Go-to-Market Strategy, and Agile Project Management.",
   skills: [
     "Product Strategy & Vision",
-    "Agile (Scrum, Kanban)",
-    "Product Lifecycle Management",
+    "Agile Project Management (Scrum)",
     "Go-To-Market Strategy",
     "TypeScript",
-    "Node.js",
     "React",
-    "Solidity",
-    "AWS",
-    "Docker",
+    "Solidity"
   ],
   projects: [
     {
-      name: "Wool.id HRIS",
+      name: "Wool",
       description:
-        "End-to-end talent and career management platform empowering job seekers and organizations. Features include assessment platform, schedule management, resume builder, job portal, and talent pool for efficient candidate-company matchmaking.",
-      link: "https://s.id/faris-project",
+        "End-to-end talent profiling and talent management platform empowering job seekers and companies. Features include assessment platform, schedule management, resume builder, job portal, and talent pool for efficient candidate-company matchmaking.",
+      link: "https://wool.id",
       skills: ["Product Management", "TypeScript", "React", "Node.js"],
       thumbnail: thumbnail1,
     },
     {
       name: "Kolektiva (Real World Asset)",
       description:
-        "Pioneering platform for tokenizing and trading real-world assets including properties and investment portfolios. Enables fractional investment through asset tokenization, making investment accessible to a wider audience.",
-      link: "https://s.id/faris-project",
-      skills: ["Blockchain", "Solidity", "Product Management", "Web3"],
+        "Web3 platform for tokenizing and trading fractional real-world assets such as real estate properties and villas. Enables fractional investment through asset tokenization, making investment accessible to a wider audience.",
+      link: "https://manexus.xyz",
+      skills: ["Product Management", "Web3","Blockchain", "Solidity"],
       thumbnail: thumbnail1,
     },
     {
       name: "AI Attendance App",
       description:
         "AI-powered attendance application streamlining student attendance management. Features QR code check-ins, geofencing validation, and AI-driven leave request analysis based on predefined criteria and behavioral patterns.",
-      link: "https://s.id/faris-project",
-      skills: ["AI/ML", "Product Management", "React", "Node.js"],
+      link: "https://manexus.xyz",
+      skills: ["Product Management", "AI/ML", "React", "Node.js"],
       thumbnail: thumbnail1,
     },
     {
       name: "Tenzro NFT",
       description:
         "AI-driven NFT platform redefining digital asset value and management. Features AI context embedding for enriched metadata, NFT minting, drops, marketplace, and comprehensive asset management tools.",
-      link: "https://s.id/faris-project",
-      skills: ["Web3", "AI", "NFT", "Product Management"],
+      link: "https://manexus.xyz",
+      skills: ["Product Management", "Web3", "AI", "NFT"],
       thumbnail: thumbnail1,
     },
     {
       name: "Wool AI Chatbot",
       description:
         "Next-generation WhatsApp chatbot powered by Large Language Models through Gemini API. Delivers intelligent conversations for support, product sales, and early-stage user engagement.",
-      link: "https://s.id/faris-project",
-      skills: ["AI/ML", "Node.js", "LLM", "Gemini API"],
+      link: "https://#",
+      skills: ["AI", "n8n", "LLM", "Gemini API"],
       thumbnail: thumbnail1,
     },
   ],
@@ -137,7 +133,7 @@ export const siteConfig = {
       degree: "Professional Certification",
       dateRange: "2023",
       achievements: [
-        "Product Strategy & Vision, Agile Project Management (Scrum, Kanban)",
+        "Product Strategy & Vision, Agile Project Management (Scrum)",
         "Product Market Fit, Go-to-Market Strategy, Stakeholder Management",
         "Technical Specification Documentation (TSD, FSD, PRD, BRD)",
       ],
