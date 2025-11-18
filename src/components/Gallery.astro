@@ -1,0 +1,75 @@
+---
+import { siteConfig } from "../config";
+import { Image } from "astro:assets";
+
+const { gallery } = siteConfig;
+---
+
+{gallery && gallery.images && gallery.images.length > 0 && (
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <h2 class="text-2xl font-bold mb-8">{gallery.title}</h2>
+
+    <div class="gallery-container overflow-hidden">
+      <div class="gallery-track">
+        {/* First set of images */}
+        {gallery.images.map((image) => (
+          <div class="gallery-item">
+            <Image
+              src={image.src}
+              alt={image.alt}
+              class="rounded-lg object-cover w-full h-full"
+              loading="lazy"
+            />
+          </div>
+        ))}
+        {/* Duplicate set for seamless loop */}
+        {gallery.images.map((image) => (
+          <div class="gallery-item">
+            <Image
+              src={image.src}
+              alt={image.alt}
+              class="rounded-lg object-cover w-full h-full"
+              loading="lazy"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+)}
+
+<style>
+  .gallery-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .gallery-track {
+    display: flex;
+    gap: 1.5rem;
+    animation: scroll 30s linear infinite;
+    width: fit-content;
+  }
+
+  .gallery-item {
+    flex-shrink: 0;
+    width: 300px;
+    height: 200px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Pause animation on hover */
+  .gallery-container:hover .gallery-track {
+    animation-play-state: paused;
+  }
+</style>
