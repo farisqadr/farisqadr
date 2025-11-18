@@ -3,7 +3,7 @@ import thumbnail1 from "./assets/kolektiva2.png";
 export const siteConfig = {
   name: "Faris Abdurrahman",
   title: "Product and Project Manager",
-  description: "Portfolio website of Faris Abdurrahman - Product Manager with 5+ years of experience",
+  description: "Portfolio website of Faris Abdurrahman - Product and Project Manager with 5+ years of experience",
   accentColor: "#1d4ed8",
   social: {
     email: "farisabdurrahman@icloud.com",
@@ -12,14 +12,16 @@ export const siteConfig = {
     github: "",
   },
   aboutMe:
-    "Result driven Product & Project Manager with 5+ years of experience leading innovation in web and app development. Successfully delivered 20+ cross-industry projects by translating business needs into actionable product requirements and driving measurable gains in efficient speed. Experienced in aligning diverse teams, utilizing AI productivity tools, and managing stakeholders toward growth product vision. Strong expertise in Product Discovery, Go-to-Market Strategy, and Agile Project Management.",
+    "Result driven Product & Project Manager with 5+ years of experience leading innovation in web and app development. Successfully delivered 20+ cross-industry projects by translating business needs into actionable product requirements and driving measurable gains in efficient speed. Experienced in aligning diverse teams, utilizing AI productivity tools, and managing stakeholders toward product growth vision.",
   skills: [
     "Product Strategy & Vision",
     "Agile Project Management (Scrum)",
     "Go-To-Market Strategy",
-    "TypeScript",
-    "React",
-    "Solidity"
+    "Business Analysis",
+    "Product Growth",
+    "Web3",
+    "Jira",
+    "Confluence"
   ],
   projects: [
     {
