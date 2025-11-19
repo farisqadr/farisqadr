@@ -4,13 +4,12 @@ Hi, I'm **Faris Abdurrahman**—a seasonal blockchain developer and a product ma
 I love building scalable, innovative solutions for real-world business cases, with a strong foundation in both technical architecture and strategic management.
 
 **Location:** Bandung, Indonesia & Remote  
-**Hackathon Winner:** ETH South-East Asia, Coinfest Asia, Bali 2024
 
 ## 🌐 Connect with Me
 
 - [LinkedIn](https://www.linkedin.com/in/faris-abdurrahman)
-- Email: `faris.code@gmail.com`
-- [Portfolio & Projects](https://s.id/faris-project)
+- Email: `faris@manexus.xyz`
+- [Portfolio & Projects]([https://s.id/faris-project](https://farisqadr.github.io/portfolio/))
 
 ## 🧑‍💻 Tech Stack
 
@@ -28,7 +27,7 @@ I love building scalable, innovative solutions for real-world business cases, wi
 
 ## 🚀 Recent Projects
 
-> See more at [s.id/faris-project](https://s.id/faris-project)
+> See more at [Github Page]([https://s.id/faris-project](https://farisqadr.github.io/portfolio/))
 
 - **Kolektiva RWA** (Fractional Real Estate Investment and Tokenization Platform)
 - **NFT AI Context Embedding** (NFT Minting, Vector AI Embedding)
