@@ -157,7 +157,7 @@ export const siteConfig = {
       ],
     },
     {
-      name: "Tenzro NFT",
+      name: "Tenzro AI-NFT",
       description:
         "AI-driven NFT platform redefining digital asset value and management. Features AI context embedding for enriched metadata, NFT minting, drops, marketplace, and comprehensive asset management tools.",
       link: "https://manexus.xyz",
