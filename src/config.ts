@@ -38,7 +38,10 @@ import manexusLogo from "./assets/company-logo/manexus-pfp.jpg";
 import woolLogo from "./assets/company-logo/wool-pfp.jpeg";
 import sprintLogo from "./assets/company-logo/sprint-pfp.jpeg";
 import qadrLogo from "./assets/company-logo/qadr-pfp.jpeg";
-import uiLogo from "./assets/company-logo/ui-pfp.jpeg";
+import uiLogo from "./assets/education-logo/ui-pfp.jpeg";
+import unpadLogo from "./assets/education-logo/logo-unpad.jpeg"
+import pbaLogo from "./assets/education-logo/pelita_bangsa_academy_logo.jpeg"
+import myskillLogo from "./assets/education-logo/myskillid_logo.jpeg"
 
 export interface ProjectImage {
   src: ImageMetadata;
@@ -238,6 +241,7 @@ export const siteConfig = {
       school: "Universitas Indonesia",
       degree: "Bachelor of Information System",
       dateRange: "Aug 2017 - Feb 2020",
+      logo: uiLogo,
       achievements: [
         "Relevant coursework: IT Project Management, IT Service Management",
         "Customer Relation Management, Administration Business",
@@ -247,15 +251,16 @@ export const siteConfig = {
       school: "Universitas Padjadjaran",
       degree: "Diploma in Informatics Engineering",
       dateRange: "Aug 2012 - Nov 2015",
+      logo: unpadLogo,
       achievements: [
-        "Relevant coursework: Programming, Database, Information Security System",
-        "Algorithm, Data Structure, Operating System, Statistics",
+        "Relevant coursework: Programming, Database, Information Security System, Algorithm, Data Structure, Operating System, Statistics",
       ],
     },
     {
-      school: "Product & Project Management Certification",
-      degree: "Professional Certification",
+      school: "MySkill",
+      degree: "Product & Project Management Certification",
       dateRange: "2023",
+      logo: myskillLogo,
       achievements: [
         "Product Strategy & Vision, Agile Project Management (Scrum)",
         "Product Market Fit, Go-to-Market Strategy, Stakeholder Management",
@@ -263,9 +268,10 @@ export const siteConfig = {
       ],
     },
     {
-      school: "Blockchain Developer Bootcamp",
-      degree: "Technical Certification",
+      school: "Pelita Bangsa Academy",
+      degree: "Blockchain Developer Bootcamp Certification",
       dateRange: "2024",
+      logo: pbaLogo,
       achievements: [
         "Solidity, Yul, Foundry, EVM, Ethers.JS",
         "Smart Contract Development, ERC20, ERC721",
