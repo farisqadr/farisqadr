@@ -9,7 +9,7 @@ I love building scalable, innovative solutions for real-world business cases, wi
 
 - [LinkedIn](https://www.linkedin.com/in/faris-abdurrahman)
 - Email: `faris@manexus.xyz`
-- [Portfolio & Projects]([https://s.id/faris-project](https://farisqadr.github.io/portfolio/))
+- [Portfolio]([[https://s.id/faris-project](https://farisqadr.github.io/portfolio/)](https://farisqadr.github.io/portfolio/))
 
 ## 🧑‍💻 Tech Stack
 
@@ -27,12 +27,11 @@ I love building scalable, innovative solutions for real-world business cases, wi
 
 ## 🚀 Recent Projects
 
-> See more at [Github Page]([https://s.id/faris-project](https://farisqadr.github.io/portfolio/))
-
 - **Kolektiva RWA** (Fractional Real Estate Investment and Tokenization Platform)
 - **NFT AI Context Embedding** (NFT Minting, Vector AI Embedding)
 - **AI Attendance App** (QR/Geofence, LLM integration)
 - **Wool AI WhatsApp Bot** (Gemini API)
+> See more at [Projects]([https://s.id/faris-project](https://farisqadr.github.io/portfolio/))
 
 ## 🔗 Skills
 
