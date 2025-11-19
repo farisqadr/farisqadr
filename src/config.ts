@@ -33,6 +33,13 @@ const galleryImg = Object.keys(galleryModules)
     .sort()
     .map((key) => (galleryModules[key] as any).default) as any[];
 
+// Import company logos
+import manexusLogo from "./assets/company-logo/manexus-pfp.jpg";
+import woolLogo from "./assets/company-logo/wool-pfp.jpeg";
+import sprintLogo from "./assets/company-logo/sprint-pfp.jpeg";
+import qadrLogo from "./assets/company-logo/qadr-pfp.jpeg";
+import uiLogo from "./assets/company-logo/ui-pfp.jpeg";
+
 export interface ProjectImage {
   src: ImageMetadata;
   alt: string;
@@ -181,6 +188,7 @@ export const siteConfig = {
       company: "Manexus Pte. Ltd.",
       title: "Product Manager",
       dateRange: "May 2024 - Present",
+      logo: manexusLogo,
       bullets: [
         "Secured 2nd place at ETH Southeast Asia Hackathon during Coinfest Asia, Bali 2024, showcasing innovation and technical expertise",
         "Led coordination with remote, cross-cultural team of 9 members, driving effective communication and collaboration across geographies",
@@ -192,6 +200,7 @@ export const siteConfig = {
       company: "Wool.id",
       title: "Head of Product & Technology",
       dateRange: "May 2023 - Sep 2025",
+      logo: woolLogo,
       bullets: [
         "Defined and executed long-term product vision and roadmaps, driving revenue growth through the launch of 10+ innovative products",
         "Managed end-to-end product development lifecycle, translating requirements into 100+ user stories, backlogs, and test cases",
@@ -203,6 +212,7 @@ export const siteConfig = {
       company: "Sprint Asia Technology",
       title: "Product and Project Management Consultant",
       dateRange: "Dec 2024 - Mar 2025",
+      logo: sprintLogo,
       bullets: [
         "Streamlined development workflows and project management across 5+ projects by optimizing Jira and Confluence processes",
         "Trained 30+ company employees through interactive workshops on Scrum Agile methodologies",
@@ -214,6 +224,7 @@ export const siteConfig = {
       company: "Qadr Creative",
       title: "Project Manager",
       dateRange: "May 2021 - May 2023",
+      logo: qadrLogo,
       bullets: [
         "Co-founded and led digital agency focused on sharia-compliant digital marketing and web/app development, delivering 5+ projects",
         "Controlled full project lifecycles from initial scoping to launch for government agencies, private sector firms, and NGOs",
