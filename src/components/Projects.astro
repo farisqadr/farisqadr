@@ -292,7 +292,27 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
   )
 }
 
-<script define:vars={{ projects: siteConfig.projects }}>
+<script
+  define:vars={{
+    projectsData: siteConfig.projects.map((project) => ({
+      name: project.name,
+      description: project.description,
+      link: project.link,
+      role: project.role,
+      timeline: project.timeline,
+      scope: project.scope,
+      methodology: project.methodology,
+      teamSize: project.teamSize,
+      techStack: project.techStack,
+      tools: project.tools,
+      skills: project.skills,
+      images: project.images?.map((img) => ({
+        src: img.src.src,
+        alt: img.alt,
+      })),
+    })),
+  }}
+>
   let currentProject = null;
   let currentImageIndex = 0;
 
@@ -300,7 +320,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
   document.querySelectorAll('.project-card').forEach((card) => {
     card.addEventListener('click', () => {
       const index = parseInt(card.getAttribute('data-project-index'));
-      currentProject = projects[index];
+      currentProject = projectsData[index];
       currentImageIndex = 0;
       openModal();
     });
