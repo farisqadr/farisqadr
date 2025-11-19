@@ -42,6 +42,7 @@ import uiLogo from "./assets/education-logo/ui-pfp.jpeg";
 import unpadLogo from "./assets/education-logo/logo-unpad.jpeg"
 import pbaLogo from "./assets/education-logo/pelita_bangsa_academy_logo.jpeg"
 import myskillLogo from "./assets/education-logo/myskillid_logo.jpeg"
+import alphaStage from "./assets/gallery/gallery3.jpeg"
 
 export interface ProjectImage {
   src: ImageMetadata;
@@ -95,23 +96,24 @@ export const siteConfig = {
       name: "AI Attendance System",
       description:
         "AI-powered attendance application streamlining student attendance management. Features QR code check-ins, geofencing validation, and AI-driven leave request analysis based on predefined criteria and behavioral patterns.",
-      link: "https://manexus.xyz",
-      skills: ["Product Management", "AI/ML", "React", "Node.js"],
+      link: "https://docs.google.com/presentation/d/1p6oG3DArw-VbXnk_nxSM5nFOQaYjkQ6eIN9Hw1bK2uM/edit?usp=sharing",
+      skills: ["Edutech", "HRIS", "HCMS", "Academic Management"],
       thumbnail: thumbnailsImg[2],
       role: "Product Manager",
-      timeline: "May 2024 - Present",
-      techStack: ["React", "Node.js", "TensorFlow", "PostgreSQL"],
+      timeline: "Sept 2024 - Present",
+      techStack: ["React", "Node.js", "OpenAI", "LangChain", "Redis", "Python", "PostgreSQL"],
       scope: "MVP Development & Launch",
       methodology: "Agile Scrum",
-      tools: ["Jira", "Figma", "Confluence", "GitHub"],
+      tools: ["Jira", "Figma", "Confluence", "GitHub", "Vercel", "Jam Dev"],
       teamSize: 9,
       images: [
-        { src: attendanceImages[0], alt: "AI Attendance Dashboard" },
+        { src: attendanceImages[2], alt: "AI Attendance Dashboard" },
         { src: attendanceImages[1], alt: "QR Code Check-in Interface" },
-        { src: attendanceImages[2], alt: "Geofencing Validation" },
+        { src: attendanceImages[0], alt: "Geofencing Validation" },
         { src: attendanceImages[3], alt: "Leave Request Analysis" },
         { src: attendanceImages[4], alt: "Attendance Reports" },
         { src: attendanceImages[5], alt: "Student Management" },
+        { src: attendanceImages[6], alt: "Geofence" },
       ],
     },
     {
@@ -119,18 +121,18 @@ export const siteConfig = {
       description:
         "End-to-end profiling assessment and talent management platform empowering job seekers and companies. Features include assessment platform, schedule management, resume builder, job portal, and talent pool for efficient candidate-company matchmaking.",
       link: "https://wool.id",
-      skills: ["Product Management", "TypeScript", "React", "Node.js"],
+      skills: ["Healthcare", "HRIS", "HCMS", "Talent Management"],
       thumbnail: thumbnailsImg[3],
       role: "Head of Product & Technology",
       timeline: "May 2023 - Sep 2025",
-      techStack: ["TypeScript", "React", "Node.js", "MongoDB", "Redis"],
+      techStack: ["TypeScript", "React", "Node.js", "PostgreSQL", "Redis"],
       scope: "Full Platform Development",
       methodology: "Agile Scrum",
-      tools: ["Jira", "Figma", "Notion", "GitHub", "AWS"],
+      tools: ["Jira", "Confluence", "Figma", "Grafana", "Jenkins", "GitHub", "AWS"],
       teamSize: 10,
       images: [
-        { src: woolImg[0], alt: "Wool Appointment" },
         { src: woolImg[1], alt: "B2B Dashboard" },
+        { src: woolImg[0], alt: "Wool Appointment" },
         { src: woolImg[2], alt: "DMHP Dashboard" },
       ],
     },
@@ -139,14 +141,14 @@ export const siteConfig = {
       description:
         "Web3 platform for tokenizing and trading fractional real-world assets such as real estate properties and villas. Enables fractional investment through asset tokenization, making investment accessible to a wider audience.",
       link: "https://manexus.xyz",
-      skills: ["Product Management", "Web3","Blockchain", "Solidity"],
+      skills: ["Web3", "Blockchain", "RWA"],
       thumbnail: thumbnailsImg[0],
       role: "Product Manager",
       timeline: "Aug 2024 - Nov 2024",
-      techStack: ["Solidity", "React", "Ethers.js", "IPFS", "Hardhat"],
+      techStack: ["Solidity", "React", "Ethers.js", "ThirdWeb"],
       scope: "Hackathon MVP",
-      methodology: "Design Sprint",
-      tools: ["Figma", "Remix IDE", "MetaMask", "GitHub"],
+      methodology: "Agile (Scrum)",
+      tools: ["Figma", "Remix IDE", "GitHub"],
       teamSize: 9,
       images: [
         { src: kolektivaImg[0], alt: "Kolektiva Asset Management" },
@@ -159,14 +161,14 @@ export const siteConfig = {
       description:
         "AI-driven NFT platform redefining digital asset value and management. Features AI context embedding for enriched metadata, NFT minting, drops, marketplace, and comprehensive asset management tools.",
       link: "https://manexus.xyz",
-      skills: ["Product Management", "Web3", "AI", "NFT"],
+      skills: ["Web3", "NFT", "AI", "Blockchain"],
       thumbnail: thumbnailsImg[1],
       role: "Product Manager",
       timeline: "Jan 2024 - Apr 2024",
-      techStack: ["Next.js", "Solidity", "OpenAI API", "Pinata", "Wagmi"],
-      scope: "Full Platform Launch",
+      techStack: ["Next.js", "Solidity", "LangChain", "OpenAI", "ThirdWeb"],
+      scope: "Product Research & MVP",
       methodology: "Agile Scrum",
-      tools: ["Jira", "Figma", "Hardhat", "Vercel", "GitHub"],
+      tools: ["Jira", "Figma", "Vercel", "GitHub"],
       teamSize: 7,
       images: [
         { src: tenzroImg[0], alt: "NFT Digital Collection Mobile" },
@@ -243,8 +245,7 @@ export const siteConfig = {
       dateRange: "Aug 2017 - Feb 2020",
       logo: uiLogo,
       achievements: [
-        "Relevant coursework: IT Project Management, IT Service Management",
-        "Customer Relation Management, Administration Business",
+        "Relevant coursework: IT Project Management, IT Service Management, Customer Relation Management, Administration Business",
       ],
     },
     {
@@ -254,17 +255,6 @@ export const siteConfig = {
       logo: unpadLogo,
       achievements: [
         "Relevant coursework: Programming, Database, Information Security System, Algorithm, Data Structure, Operating System, Statistics",
-      ],
-    },
-    {
-      school: "MySkill",
-      degree: "Product & Project Management Certification",
-      dateRange: "2023",
-      logo: myskillLogo,
-      achievements: [
-        "Product Strategy & Vision, Agile Project Management (Scrum)",
-        "Product Market Fit, Go-to-Market Strategy, Stakeholder Management",
-        "Technical Specification Documentation (TSD, FSD, PRD, BRD)",
       ],
     },
     {
@@ -278,6 +268,18 @@ export const siteConfig = {
         "ETH SEA Hackathon Winner - Real World Asset Track",
       ],
     },
+    {
+      school: "MySkill",
+      degree: "Product & Project Management Certification",
+      dateRange: "2023",
+      logo: myskillLogo,
+      achievements: [
+        "Product Strategy & Vision, Agile Project Management (Scrum)",
+        "Product Market Fit, Go-to-Market Strategy, Stakeholder Management",
+        "Technical Specification Documentation (TSD, FSD, PRD, BRD)",
+      ],
+    },
+    
   ],
   gallery: {
     title: "Gallery",
@@ -285,6 +287,7 @@ export const siteConfig = {
       { src: galleryImg[0], alt: "Hackathon ETH SEA Win" },
       { src: galleryImg[1], alt: "Wool Team" },
       { src: galleryImg[2], alt: "Hackathon ICP Win" },
+      { src: alphaStage, alt: "RWA Alpha Stage" },
     ],
   },
 };
