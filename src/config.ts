@@ -1,17 +1,37 @@
-const thumbnailModules = import.meta.glob("./assets/thumbnail*.png", { eager: true });
-const thumbnails = Object.keys(thumbnailModules)
-  .sort()
-  .map((key) => (thumbnailModules[key] as any).default) as any[];
-
-// Extract individual thumbnails by index
-const [thumbnail0, thumbnail1, thumbnail2, thumbnail3] = thumbnails;
-
 // Bulk import attendance images
 const attendanceModules = import.meta.glob("./assets/attendance/*.png", { eager: true });
 const attendanceImages = Object.keys(attendanceModules)
   .sort()
   .map((key) => (attendanceModules[key] as any).default) as any[];
-const attendanceImg = attendanceImages[0]; // Use first attendance image
+
+// Bulk import tenzro images
+const tenzroModules = import.meta.glob("./assets/tenzro-nft/*.png", { eager: true });
+const tenzroImg = Object.keys(tenzroModules)
+  .sort()
+  .map((key) => (tenzroModules[key] as any).default) as any[];
+
+// Bulk import kolektiva images
+const kolektivaModules = import.meta.glob("./assets/kolektiva/*.png", { eager: true });
+const kolektivaImg = Object.keys(kolektivaModules)
+  .sort()
+  .map((key) => (kolektivaModules[key] as any).default) as any[];
+
+// Bulk import wool images
+const woolModules = import.meta.glob("./assets/wool/*.png", { eager: true });
+const woolImg = Object.keys(woolModules)
+  .sort()
+  .map((key) => (woolModules[key] as any).default) as any[];
+
+// Bulk import thumbnails images
+const thumbnailsModules = import.meta.glob("./assets/thumbnails/*.png", { eager: true });
+const thumbnailsImg = Object.keys(thumbnailsModules)
+  .sort()
+  .map((key) => (thumbnailsModules[key] as any).default) as any[];
+
+const galleryModules = import.meta.glob("./assets/gallery/*.png", { eager: true });
+const galleryImg = Object.keys(galleryModules)
+    .sort()
+    .map((key) => (galleryModules[key] as any).default) as any[];
 
 export interface ProjectImage {
   src: ImageMetadata;
@@ -40,7 +60,7 @@ export const siteConfig = {
   description: "Portfolio website of Faris Abdurrahman - Product and Project Manager with 5+ years of experience",
   accentColor: "#1d4ed8",
   social: {
-    email: "farisabdurrahman@icloud.com",
+    email: "faris@manexus.xyz",
     linkedin: "https://www.linkedin.com/in/faris-abdurrahman/",
     twitter: "",
     github: "",
@@ -62,12 +82,12 @@ export const siteConfig = {
   projects: [
 
     {
-      name: "AI Attendance App",
+      name: "AI Attendance System",
       description:
         "AI-powered attendance application streamlining student attendance management. Features QR code check-ins, geofencing validation, and AI-driven leave request analysis based on predefined criteria and behavioral patterns.",
       link: "https://manexus.xyz",
       skills: ["Product Management", "AI/ML", "React", "Node.js"],
-      thumbnail: thumbnail0,
+      thumbnail: thumbnailsImg[2],
       role: "Product Manager",
       timeline: "May 2024 - Present",
       techStack: ["React", "Node.js", "TensorFlow", "PostgreSQL"],
@@ -85,12 +105,12 @@ export const siteConfig = {
       ],
     },
     {
-      name: "Wool",
+      name: "Talent Management Platform",
       description:
         "End-to-end profiling assessment and talent management platform empowering job seekers and companies. Features include assessment platform, schedule management, resume builder, job portal, and talent pool for efficient candidate-company matchmaking.",
       link: "https://wool.id",
       skills: ["Product Management", "TypeScript", "React", "Node.js"],
-      thumbnail: thumbnail1,
+      thumbnail: thumbnailsImg[3],
       role: "Head of Product & Technology",
       timeline: "May 2023 - Sep 2025",
       techStack: ["TypeScript", "React", "Node.js", "MongoDB", "Redis"],
@@ -99,9 +119,9 @@ export const siteConfig = {
       tools: ["Jira", "Figma", "Notion", "GitHub", "AWS"],
       teamSize: 10,
       images: [
-        { src: thumbnail1, alt: "Wool Platform Overview" },
-        { src: thumbnail0, alt: "Assessment Interface" },
-        { src: thumbnail3, alt: "Talent Pool Dashboard" },
+        { src: woolImg[0], alt: "Wool Appointment" },
+        { src: woolImg[1], alt: "B2B Dashboard" },
+        { src: woolImg[2], alt: "DMHP Dashboard" },
       ],
     },
     {
@@ -110,7 +130,7 @@ export const siteConfig = {
         "Web3 platform for tokenizing and trading fractional real-world assets such as real estate properties and villas. Enables fractional investment through asset tokenization, making investment accessible to a wider audience.",
       link: "https://manexus.xyz",
       skills: ["Product Management", "Web3","Blockchain", "Solidity"],
-      thumbnail: thumbnail2,
+      thumbnail: thumbnailsImg[0],
       role: "Product Manager",
       timeline: "Aug 2024 - Nov 2024",
       techStack: ["Solidity", "React", "Ethers.js", "IPFS", "Hardhat"],
@@ -119,9 +139,9 @@ export const siteConfig = {
       tools: ["Figma", "Remix IDE", "MetaMask", "GitHub"],
       teamSize: 9,
       images: [
-        { src: thumbnail2, alt: "Kolektiva Platform" },
-        { src: thumbnail3, alt: "Asset Tokenization" },
-        { src: thumbnail0, alt: "Trading Interface" },
+        { src: kolektivaImg[0], alt: "Kolektiva Asset Management" },
+        { src: kolektivaImg[1], alt: "Tokenized Property List" },
+        { src: kolektivaImg[2], alt: "Detail Property Interface" },
       ],
     },
     {
@@ -130,7 +150,7 @@ export const siteConfig = {
         "AI-driven NFT platform redefining digital asset value and management. Features AI context embedding for enriched metadata, NFT minting, drops, marketplace, and comprehensive asset management tools.",
       link: "https://manexus.xyz",
       skills: ["Product Management", "Web3", "AI", "NFT"],
-      thumbnail: thumbnail3,
+      thumbnail: thumbnailsImg[1],
       role: "Product Manager",
       timeline: "Jan 2024 - Apr 2024",
       techStack: ["Next.js", "Solidity", "OpenAI API", "Pinata", "Wagmi"],
@@ -139,9 +159,12 @@ export const siteConfig = {
       tools: ["Jira", "Figma", "Hardhat", "Vercel", "GitHub"],
       teamSize: 7,
       images: [
-        { src: thumbnail3, alt: "Tenzro NFT Platform" },
-        { src: thumbnail2, alt: "NFT Marketplace" },
-        { src: thumbnail1, alt: "AI Metadata Generator" },
+        { src: tenzroImg[0], alt: "NFT Digital Collection Mobile" },
+        { src: tenzroImg[1], alt: "NFT Profile" },
+        { src: tenzroImg[2], alt: "AI Context Embedding" },
+        { src: tenzroImg[3], alt: "AI Context Embedding Desktop" },
+        { src: tenzroImg[4], alt: "NFT Preview" },
+        { src: tenzroImg[5], alt: "NFT Collection" },
       ],
     },
     // {
@@ -242,12 +265,9 @@ export const siteConfig = {
   gallery: {
     title: "Gallery",
     images: [
-      { src: thumbnail0, alt: "AI Attendance App" },
-      { src: thumbnail1, alt: "Wool Platform" },
-      { src: thumbnail2, alt: "Kolektiva RWA" },
-      { src: thumbnail3, alt: "Tenzro NFT" },
-      { src: thumbnail0, alt: "AI Attendance App" },
-      { src: thumbnail1, alt: "Wool Platform" },
+      { src: galleryImg[0], alt: "Hackathon ETH SEA Win" },
+      { src: galleryImg[1], alt: "Wool Team" },
+      { src: galleryImg[2], alt: "Hackathon ICP Win" },
     ],
   },
 };

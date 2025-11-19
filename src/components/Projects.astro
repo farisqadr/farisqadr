@@ -124,10 +124,10 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
           <div class="p-6 sm:p-8 md:p-10 pt-16">
             {/* Image Carousel */}
             <div id="modal-carousel" class="relative mb-8 rounded-xl overflow-hidden bg-gray-100">
-              <div class="carousel-container aspect-video relative">
+              <div class="carousel-container relative flex items-center justify-center min-h-[300px] max-h-[600px]">
                 <img
                   id="carousel-image"
-                  class="w-full h-full object-cover"
+                  class="w-full h-full object-contain max-h-[600px]"
                   alt="Project image"
                 />
 
