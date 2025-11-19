@@ -3,6 +3,27 @@ import thumbnail1 from "./assets/thumbnail1.png";
 import thumbnail2 from "./assets/thumbnail2.png";
 import thumbnail3 from "./assets/thumbnail3.png";
 
+export interface ProjectImage {
+  src: ImageMetadata;
+  alt: string;
+}
+
+export interface Project {
+  name: string;
+  description: string;
+  link?: string;
+  skills: string[];
+  thumbnail?: ImageMetadata;
+  role?: string;
+  timeline?: string;
+  techStack?: string[];
+  scope?: string;
+  methodology?: string;
+  tools?: string[];
+  teamSize?: number;
+  images?: ProjectImage[];
+}
+
 export const siteConfig = {
   name: "Faris Abdurrahman",
   title: ["Product Manager", "Project Manager", "Head of Product & Technology"],
@@ -37,6 +58,18 @@ export const siteConfig = {
       link: "https://manexus.xyz",
       skills: ["Product Management", "AI/ML", "React", "Node.js"],
       thumbnail: thumbnail0,
+      role: "Product Manager",
+      timeline: "May 2024 - Present",
+      techStack: ["React", "Node.js", "TensorFlow", "PostgreSQL"],
+      scope: "MVP Development & Launch",
+      methodology: "Agile Scrum",
+      tools: ["Jira", "Figma", "Confluence", "GitHub"],
+      teamSize: 9,
+      images: [
+        { src: thumbnail0, alt: "AI Attendance App Dashboard" },
+        { src: thumbnail1, alt: "QR Code Check-in Feature" },
+        { src: thumbnail2, alt: "Analytics Dashboard" },
+      ],
     },
     {
       name: "Wool",
@@ -45,6 +78,18 @@ export const siteConfig = {
       link: "https://wool.id",
       skills: ["Product Management", "TypeScript", "React", "Node.js"],
       thumbnail: thumbnail1,
+      role: "Head of Product & Technology",
+      timeline: "May 2023 - Sep 2025",
+      techStack: ["TypeScript", "React", "Node.js", "MongoDB", "Redis"],
+      scope: "Full Platform Development",
+      methodology: "Agile Scrum",
+      tools: ["Jira", "Figma", "Notion", "GitHub", "AWS"],
+      teamSize: 10,
+      images: [
+        { src: thumbnail1, alt: "Wool Platform Overview" },
+        { src: thumbnail0, alt: "Assessment Interface" },
+        { src: thumbnail3, alt: "Talent Pool Dashboard" },
+      ],
     },
     {
       name: "Kolektiva (Real World Asset)",
@@ -53,6 +98,18 @@ export const siteConfig = {
       link: "https://manexus.xyz",
       skills: ["Product Management", "Web3","Blockchain", "Solidity"],
       thumbnail: thumbnail2,
+      role: "Product Manager",
+      timeline: "Aug 2024 - Nov 2024",
+      techStack: ["Solidity", "React", "Ethers.js", "IPFS", "Hardhat"],
+      scope: "Hackathon MVP",
+      methodology: "Design Sprint",
+      tools: ["Figma", "Remix IDE", "MetaMask", "GitHub"],
+      teamSize: 9,
+      images: [
+        { src: thumbnail2, alt: "Kolektiva Platform" },
+        { src: thumbnail3, alt: "Asset Tokenization" },
+        { src: thumbnail0, alt: "Trading Interface" },
+      ],
     },
     {
       name: "Tenzro NFT",
@@ -61,6 +118,18 @@ export const siteConfig = {
       link: "https://manexus.xyz",
       skills: ["Product Management", "Web3", "AI", "NFT"],
       thumbnail: thumbnail3,
+      role: "Product Manager",
+      timeline: "Jan 2024 - Apr 2024",
+      techStack: ["Next.js", "Solidity", "OpenAI API", "Pinata", "Wagmi"],
+      scope: "Full Platform Launch",
+      methodology: "Agile Scrum",
+      tools: ["Jira", "Figma", "Hardhat", "Vercel", "GitHub"],
+      teamSize: 7,
+      images: [
+        { src: thumbnail3, alt: "Tenzro NFT Platform" },
+        { src: thumbnail2, alt: "NFT Marketplace" },
+        { src: thumbnail1, alt: "AI Metadata Generator" },
+      ],
     },
     // {
     //   name: "Wool AI Chatbot",
