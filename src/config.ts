@@ -1,7 +1,17 @@
-import thumbnail0 from "./assets/thumbnail0.png";
-import thumbnail1 from "./assets/thumbnail1.png";
-import thumbnail2 from "./assets/thumbnail2.png";
-import thumbnail3 from "./assets/thumbnail3.png";
+const thumbnailModules = import.meta.glob("./assets/thumbnail*.png", { eager: true });
+const thumbnails = Object.keys(thumbnailModules)
+  .sort()
+  .map((key) => (thumbnailModules[key] as any).default) as any[];
+
+// Extract individual thumbnails by index
+const [thumbnail0, thumbnail1, thumbnail2, thumbnail3] = thumbnails;
+
+// Bulk import attendance images
+const attendanceModules = import.meta.glob("./assets/attendance/*.png", { eager: true });
+const attendanceImages = Object.keys(attendanceModules)
+  .sort()
+  .map((key) => (attendanceModules[key] as any).default) as any[];
+const attendanceImg = attendanceImages[0]; // Use first attendance image
 
 export interface ProjectImage {
   src: ImageMetadata;
@@ -66,9 +76,12 @@ export const siteConfig = {
       tools: ["Jira", "Figma", "Confluence", "GitHub"],
       teamSize: 9,
       images: [
-        { src: thumbnail0, alt: "AI Attendance App Dashboard" },
-        { src: thumbnail1, alt: "QR Code Check-in Feature" },
-        { src: thumbnail2, alt: "Analytics Dashboard" },
+        { src: attendanceImages[0], alt: "AI Attendance Dashboard" },
+        { src: attendanceImages[1], alt: "QR Code Check-in Interface" },
+        { src: attendanceImages[2], alt: "Geofencing Validation" },
+        { src: attendanceImages[3], alt: "Leave Request Analysis" },
+        { src: attendanceImages[4], alt: "Attendance Reports" },
+        { src: attendanceImages[5], alt: "Student Management" },
       ],
     },
     {
