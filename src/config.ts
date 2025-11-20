@@ -48,7 +48,6 @@ import uiLogo from "./assets/education-logo/ui-pfp.jpeg";
 import unpadLogo from "./assets/education-logo/logo-unpad.jpeg"
 import pbaLogo from "./assets/education-logo/pelita_bangsa_academy_logo.jpeg"
 import myskillLogo from "./assets/education-logo/myskillid_logo.jpeg"
-import alphaStage from "./assets/gallery/gallery3.jpeg"
 
 
 export interface ProjectImage {
@@ -352,6 +351,18 @@ export const siteConfig = {
         "Oversaw financial planning, document administration, and resource allocation to optimize project delivery",
       ],
     },
+    {
+      company: "Rectorate Universitas Indonesia",
+      title: "Application Developer",
+      dateRange: "April 2019 - April 2021",
+      logo: uiLogo,
+      bullets: [
+        "Developed and maintained a web application for faculty grant management",
+        "Facilitated stakeholder communication between vendors and end users",
+        "Diagnosed and resolved bug reports and technical issues",
+        "Created and maintained comprehensive project documentation",
+      ],
+    },
   ],
   education: [
     {
@@ -402,7 +413,8 @@ export const siteConfig = {
       { src: galleryImg[0], alt: "Hackathon ETH SEA Win" },
       { src: galleryImg[1], alt: "Wool Team" },
       { src: galleryImg[2], alt: "Hackathon ICP Win" },
-      { src: alphaStage, alt: "RWA Alpha Stage" },
+      { src: galleryImg[3], alt: "RWA Alpha Stage" },
+      { src: galleryImg[4], alt: "ICP Pitch" },
     ],
   },
 };
