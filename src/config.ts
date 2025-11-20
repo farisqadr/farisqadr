@@ -238,7 +238,7 @@ export const siteConfig = {
         "WordPress-based learning management system for Japanese language education. Features include course modules, interactive lessons, progress tracking, quiz system, and multimedia content delivery for effective language learning experience.",
       link: "",
       skills: ["Learning Management System"],
-      thumbnail: thumbnailsImg[6],
+      thumbnail: thumbnailsImg[9],
       role: "Web Developer",
       timeline: "2023",
       techStack: ["Wordpress", "PHP", "MySQL"],
