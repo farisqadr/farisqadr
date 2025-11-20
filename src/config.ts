@@ -34,10 +34,13 @@ const thumbnailsImg = Object.keys(thumbnailsModules)
   .sort()
   .map((key) => (thumbnailsModules[key] as any).default) as any[];
 
-const galleryModules = import.meta.glob("./assets/gallery/*.png", { eager: true });
+const galleryModules = {
+  ...import.meta.glob("./assets/gallery/*.png", { eager: true }),
+  ...import.meta.glob("./assets/gallery/*.jpeg", { eager: true }),
+};
 const galleryImg = Object.keys(galleryModules)
-    .sort()
-    .map((key) => (galleryModules[key] as any).default) as any[];
+  .sort()
+  .map((key) => (galleryModules[key] as any).default) as any[];
 
 // Import company logos
 import manexusLogo from "./assets/company-logo/manexus-pfp.jpg";
