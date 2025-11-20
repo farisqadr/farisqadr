@@ -44,6 +44,7 @@ import pbaLogo from "./assets/education-logo/pelita_bangsa_academy_logo.jpeg"
 import myskillLogo from "./assets/education-logo/myskillid_logo.jpeg"
 import alphaStage from "./assets/gallery/gallery3.jpeg"
 
+
 export interface ProjectImage {
   src: ImageMetadata;
   alt: string;
@@ -198,18 +199,46 @@ export const siteConfig = {
   ],
   deliverables: [
     {
-      title: "PRD: Flash Sale eCommerce ABC",
-      thumbnail: thumbnailsImg[2],
-      description: "Comprehensive product requirements document for implementing flash sale functionality in eCommerce platform, including user flows, technical specifications, and success metrics.",
+      title: "PRD: Medira AI Healthcare",
+      thumbnail: thumbnailsImg[12],
+      description: "",
       tagsDocument: "Product Requirement Document",
-      URL: "https://drive.google.com",
+      URL: "https://www.notion.so/PRD-SFA-Canvassing-App-for-Sales-and-Inventory-Integration-2b1a2641aa43814ebbf5e211441a0eec?source=copy_link",
     },
     {
-      title: "TSD: Biofloc - eFishery",
-      thumbnail: thumbnailsImg[1],
+      title: "PRD: AI Sales Force Automation (SFA)",
+      thumbnail: thumbnailsImg[10],
+      description: "",
+      tagsDocument: "Product Requirement Document",
+      URL: "https://www.notion.so/PRD-SFA-Canvassing-App-for-Sales-and-Inventory-Integration-2b1a2641aa43814ebbf5e211441a0eec?source=copy_link",
+    },
+    {
+      title: "PRD: Flash Sale ABC eCommerce",
+      thumbnail: thumbnailsImg[11],
+      description: "Comprehensive product requirements document for implementing flash sale functionality in eCommerce platform, including user flows, technical specifications, and success metrics.",
+      tagsDocument: "Product Requirement Document",
+      URL: "https://www.notion.so/PRD-SFA-Canvassing-App-for-Sales-and-Inventory-Integration-2b1a2641aa43814ebbf5e211441a0eec?source=copy_link",
+    },
+    {
+      title: "TSD: IoT Smartfeeder",
+      thumbnail: thumbnailsImg[13],
       description: "Technical specification document detailing the architecture and implementation approach for Biofloc monitoring system in eFishery's aquaculture platform.",
       tagsDocument: "Technical Specification Document",
-      URL: "https://drive.google.com",
+      URL: "https://drive.google.com/file/d/1bXP9uOgKNPuIKWUxFX_gmFak7KRAxzWl/view?usp=sharing",
+    },
+    {
+      title: "GTM: Crypto Project to Indonesia",
+      thumbnail: thumbnailsImg[8],
+      description: "",
+      tagsDocument: "Go To Market Strategy",
+      URL: "https://drive.google.com/file/d/1bXP9uOgKNPuIKWUxFX_gmFak7KRAxzWl/view?usp=sharing",
+    },
+    {
+      title: "Business Proposal: Gooroo",
+      thumbnail: thumbnailsImg[5],
+      description: "",
+      tagsDocument: "Business Proposal",
+      URL: "https://drive.google.com/file/d/0B2O5_zbfqNxYSHctRTJISTBIY2M/view?usp=sharing&resourcekey=0-Yaw3eESggrSvK0rsc0JDXA",
     },
   ],
   experience: [
