@@ -65,6 +65,14 @@ export interface Project {
   images?: ProjectImage[];
 }
 
+export interface Deliverable {
+  title: string;
+  thumbnail?: ImageMetadata;
+  description: string;
+  tagsDocument: string;
+  URL: string;
+}
+
 export const siteConfig = {
   name: "Faris Abdurrahman",
   title: ["Product Manager", "Project Manager", "Head of Product & Technology"],
@@ -187,6 +195,22 @@ export const siteConfig = {
     //   skills: ["AI", "n8n", "LLM", "Gemini API"],
     //   thumbnail: thumbnail1,
     // },
+  ],
+  deliverables: [
+    {
+      title: "PRD: Flash Sale eCommerce ABC",
+      thumbnail: thumbnailsImg[2],
+      description: "Comprehensive product requirements document for implementing flash sale functionality in eCommerce platform, including user flows, technical specifications, and success metrics.",
+      tagsDocument: "Product Requirement Document",
+      URL: "https://drive.google.com",
+    },
+    {
+      title: "TSD: Biofloc - eFishery",
+      thumbnail: thumbnailsImg[1],
+      description: "Technical specification document detailing the architecture and implementation approach for Biofloc monitoring system in eFishery's aquaculture platform.",
+      tagsDocument: "Technical Specification Document",
+      URL: "https://drive.google.com",
+    },
   ],
   experience: [
     {
