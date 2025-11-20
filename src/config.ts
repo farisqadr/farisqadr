@@ -134,9 +134,9 @@ export const siteConfig = {
       ],
     },
     {
-      name: "Talent Management Platform",
+      name: "Wool WebApp",
       description:
-        "End-to-end profiling assessment and talent management platform empowering job seekers and companies. Features include assessment platform, schedule management, resume builder, job portal, and talent pool for efficient candidate-company matchmaking.",
+        "For past two years as a Head of Product I'm develops this platform, there're profiling assessment and talent management services; empowering young professional and companies. Features include assessment platform, schedule management with Psychologist, resume builder, job portal, and talent pool for efficient candidate-company matchmaking.",
       link: "https://www.canva.com/design/DAF-myn6WIE/5gHgnQolAFH0cH5S1XO4KQ/view?utm_content=DAF-myn6WIE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb019ed13d6",
       skills: ["Healthcare", "HRIS", "HCMS", "Talent Management"],
       thumbnail: thumbnailsImg[3],
@@ -156,7 +156,7 @@ export const siteConfig = {
     {
       name: "Kolektiva (Real World Asset)",
       description:
-        "Web3 platform for tokenizing and trading fractional real-world assets such as real estate properties and villas. Enables fractional investment through asset tokenization, making investment accessible to a wider audience.",
+        "This Web3 platform built for Hackathon ETH-SEA at Coinfest Asia in short-timed, the features include tokenizing and trading fractional Real-World Assets such as real estate properties and villas. Enables fractional investment through asset tokenization, making investment accessible to a wider audience.",
       link: "https://devfolio.co/projects/kolektiva-7912",
       skills: ["Web3", "Blockchain", "RWA"],
       thumbnail: thumbnailsImg[0],
@@ -199,7 +199,7 @@ export const siteConfig = {
     {
       name: "UI Grant Management",
       description:
-        "Comprehensive grant management system for Universitas Indonesia streamlining the entire grant lifecycle. Features include proposal submission, review workflow, budget tracking, reporting, and administrative oversight for academic research funding.",
+        "About two years developed and managed this WebApp. A comprehensive grant management system for Universitas Indonesia streamlining the entire grant lifecycle. Features include proposal submission, review workflow, budget tracking, reporting, and administrative oversight for academic research funding.",
       link: "https://youtu.be/JyLGFUbdKug?si=BIBazC4SjaAgSmlD",
       skills: ["Edutech"],
       thumbnail: thumbnailsImg[7],
