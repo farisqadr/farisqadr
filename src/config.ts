@@ -1,4 +1,10 @@
 // Bulk import attendance images
+const amModules = import.meta.glob("./assets/attendance/*.png", { eager: true });
+const amImages = Object.keys(amModules)
+  .sort()
+  .map((key) => (amModules[key] as any).default) as any[];
+
+// Bulk import attendance images
 const attendanceModules = import.meta.glob("./assets/attendance/*.png", { eager: true });
 const attendanceImages = Object.keys(attendanceModules)
   .sort()
@@ -188,6 +194,62 @@ export const siteConfig = {
         { src: tenzroImg[5], alt: "NFT Collection" },
       ],
     },
+    {
+      name: "UI Grant Management",
+      description:
+        "Comprehensive grant management system for Universitas Indonesia streamlining the entire grant lifecycle. Features include proposal submission, review workflow, budget tracking, reporting, and administrative oversight for academic research funding.",
+      link: "https://youtu.be/JyLGFUbdKug?si=BIBazC4SjaAgSmlD",
+      skills: ["Edutech"],
+      thumbnail: thumbnailsImg[7],
+      role: "Project Manager",
+      timeline: "April 2019 - Apr 2021",
+      techStack: ["Node.js", "Vue.js", "SQL Server"],
+      scope: "Full Development & Launch",
+      methodology: "Waterfall",
+      tools: ["VS Code", "Ms. SQL Server"],
+      teamSize: 6,
+      images: [
+        { src: thumbnailsImg[7], alt: "Home Page" },
+      ],
+    },
+    {
+      name: "GLPI Asset Management",
+      description:
+        "IT asset management and helpdesk system built on GLPI framework for comprehensive infrastructure monitoring. Features include hardware inventory tracking, software license management, network mapping, and incident ticketing system for efficient IT operations.",
+      link: "",
+      skills: ["Asset Management"],
+      thumbnail: thumbnailsImg[6],
+      role: "Web Developer/System Administrator",
+      timeline: "April 2022 - Jan 2023",
+      techStack: ["php", "VMWare", "SQL"],
+      scope: "Full Development & Administration",
+      methodology: "Waterfall",
+      tools: ["VS Code"],
+      teamSize: 2,
+      images: [
+        { src: amImages[0], alt: "Dashboard" },
+        { src: amImages[1], alt: "DFD" },
+        { src: amImages[2], alt: "Network Map" },
+      ],
+    },
+    {
+      name: "LMS Nihongo",
+      description:
+        "WordPress-based learning management system for Japanese language education. Features include course modules, interactive lessons, progress tracking, quiz system, and multimedia content delivery for effective language learning experience.",
+      link: "",
+      skills: ["Learning Management System"],
+      thumbnail: thumbnailsImg[6],
+      role: "Web Developer",
+      timeline: "2023",
+      techStack: ["Wordpress", "PHP", "MySQL"],
+      scope: "Full Development & Content Development",
+      methodology: "Agile",
+      tools: ["WP Admin", "VS Code", "Canva"],
+      teamSize: 2,
+      images: [
+        { src: thumbnailsImg[6], alt: "Landing Page" },
+      ],
+    },
     // {
     //   name: "Wool AI Chatbot",
     //   description:
@@ -201,14 +263,14 @@ export const siteConfig = {
     {
       title: "PRD: Medira AI Healthcare",
       thumbnail: thumbnailsImg[12],
-      description: "",
+      description: "Product requirements document for AI-powered healthcare platform, detailing features for patient management, diagnostic assistance, and healthcare workflow optimization.",
       tagsDocument: "Product Requirement Document",
-      URL: "https://www.notion.so/PRD-SFA-Canvassing-App-for-Sales-and-Inventory-Integration-2b1a2641aa43814ebbf5e211441a0eec?source=copy_link",
+      URL: "https://www.notion.so/Product-Research-MEDIRA-294a2641aa438077b212d8e9036fce83?source=copy_link",
     },
     {
       title: "PRD: AI Sales Force Automation (SFA)",
       thumbnail: thumbnailsImg[10],
-      description: "",
+      description: "Comprehensive PRD for AI-driven sales force automation platform with canvassing capabilities, route optimization, inventory integration, and intelligent sales analytics.",
       tagsDocument: "Product Requirement Document",
       URL: "https://www.notion.so/PRD-SFA-Canvassing-App-for-Sales-and-Inventory-Integration-2b1a2641aa43814ebbf5e211441a0eec?source=copy_link",
     },
@@ -229,14 +291,14 @@ export const siteConfig = {
     {
       title: "GTM: Crypto Project to Indonesia",
       thumbnail: thumbnailsImg[8],
-      description: "",
+      description: "Strategic go-to-market plan for launching cryptocurrency project in Indonesian market, including market analysis, regulatory compliance, user acquisition strategy, and localization approach.",
       tagsDocument: "Go To Market Strategy",
       URL: "https://drive.google.com/file/d/1bXP9uOgKNPuIKWUxFX_gmFak7KRAxzWl/view?usp=sharing",
     },
     {
       title: "Business Proposal: Gooroo",
       thumbnail: thumbnailsImg[5],
-      description: "",
+      description: "Comprehensive business proposal for educational technology platform connecting students with qualified tutors, including market opportunity, business model, financial projections, and implementation roadmap.",
       tagsDocument: "Business Proposal",
       URL: "https://drive.google.com/file/d/0B2O5_zbfqNxYSHctRTJISTBIY2M/view?usp=sharing&resourcekey=0-Yaw3eESggrSvK0rsc0JDXA",
     },
