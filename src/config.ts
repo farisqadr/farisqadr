@@ -90,8 +90,8 @@ export const siteConfig = {
   social: {
     email: "faris@manexus.xyz",
     linkedin: "https://www.linkedin.com/in/faris-abdurrahman/",
-    twitter: "",
-    github: "",
+    twitter: "https://x.com/mangfaris",
+    github: "https://github.com/farisqadr",
   },
   aboutMe:
     "Result driven Product & Project Manager with 5+ years of experience leading innovation in web and app development. Successfully delivered 20+ cross-industry projects by translating business needs into actionable product requirements and driving measurable gains in efficient speed. Experienced in aligning diverse teams, utilizing AI productivity tools, and managing stakeholders toward product growth vision.",
@@ -290,13 +290,13 @@ export const siteConfig = {
       tagsDocument: "Technical Specification Document",
       URL: "https://drive.google.com/file/d/1bXP9uOgKNPuIKWUxFX_gmFak7KRAxzWl/view?usp=sharing",
     },
-    {
-      title: "GTM: Crypto Project to Indonesia",
-      thumbnail: thumbnailsImg[8],
-      description: "Strategic go-to-market plan for launching cryptocurrency project in Indonesian market, including market analysis, regulatory compliance, user acquisition strategy, and localization approach.",
-      tagsDocument: "Go To Market Strategy",
-      URL: "https://drive.google.com/file/d/1bXP9uOgKNPuIKWUxFX_gmFak7KRAxzWl/view?usp=sharing",
-    },
+    // {
+    //   title: "GTM: Crypto Project to Indonesia",
+    //   thumbnail: thumbnailsImg[8],
+    //   description: "Strategic go-to-market plan for launching cryptocurrency project in Indonesian market, including market analysis, regulatory compliance, user acquisition strategy, and localization approach.",
+    //   tagsDocument: "Go To Market Strategy",
+    //   URL: "https://drive.google.com/file/d/1bXP9uOgKNPuIKWUxFX_gmFak7KRAxzWl/view?usp=sharing",
+    // },
     {
       title: "Business Proposal: Gooroo",
       thumbnail: thumbnailsImg[5],
@@ -394,7 +394,6 @@ export const siteConfig = {
       achievements: [
         "Solidity, Yul, Foundry, EVM, Ethers.JS",
         "Smart Contract Development, ERC20, ERC721",
-        "ETH SEA Hackathon Winner - Real World Asset Track",
       ],
     },
     {
