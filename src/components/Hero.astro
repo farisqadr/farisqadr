@@ -7,12 +7,13 @@ import { siteConfig } from "../config";
   class="relative isolate overflow-hidden bg-white py-24 md:h-screen"
   style={`--accent-color: ${siteConfig.accentColor}`}
 >
-  <!-- Gradient overlay -->
+  <!-- // Gradient overlay
   <div
     class="absolute inset-0 -z-10"
-    style={`background: radial-gradient(ellipse 800px 1200px at 0% 0%, ${siteConfig.accentColor}40 0%, ${siteConfig.accentColor}25 20%, ${siteConfig.accentColor}10 40%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0.8) 90%, white 100%)`}
+    style={`background: radial-gradient(ellipse 800px 1200px at 0% 0%, ${siteConfig.accentColor}20 0%, ${siteConfig.accentColor}15 20%, ${siteConfig.accentColor}08 40%, rgba(255, 255, 255, 0.5) 70%, rgba(255, 255, 255, 0.9) 90%, white 100%)`}
   >
   </div>
+  // test -->
   <svg
     aria-hidden="true"
     class="absolute inset-0 -z-10 size-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
@@ -36,98 +37,15 @@ import { siteConfig } from "../config";
         height="400"
         patternUnits="userSpaceOnUse"
       >
-        <text
-          x="50"
-          y="50"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="24"
-          transform="rotate(-15)">&lt;/&gt;</text
-        >
-        <text
-          x="150"
-          y="100"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="20"
-          transform="rotate(10)">{}</text
-        >
-        <text
-          x="250"
-          y="80"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="18"
-          transform="rotate(-5)">=&gt;</text
-        >
-        <text
-          x="100"
-          y="200"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="22"
-          transform="rotate(15)">[]</text
-        >
-        <text
-          x="300"
-          y="180"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="20"
-          transform="rotate(-10)">&lt;&gt;</text
-        >
-        <text
-          x="200"
-          y="250"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="24"
-          transform="rotate(5)">()</text
-        >
-        <text
-          x="50"
-          y="320"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="18"
-          transform="rotate(-8)">::</text
-        >
-        <text
-          x="350"
-          y="300"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="22"
-          transform="rotate(12)">==</text
-        >
-        <text
-          x="150"
-          y="350"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="20"
-          transform="rotate(-15)">++</text
-        >
-        <text
-          x="250"
-          y="370"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="24"
-          transform="rotate(8)">;</text
-        >
+        <!-- Symbols rendered dynamically via JavaScript for interactivity -->
       </pattern>
     </defs>
-    <rect
-      fill="url(#programming-symbols)"
-      width="100%"
-      height="100%"
-      opacity="0.2"></rect>
     <rect
       fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"
       width="100%"
       height="100%"
       stroke-width={0}></rect>
+    <g id="dynamic-symbols" opacity="0.9"></g>
   </svg>
   <div class="h-full mx-auto p-8 sm:p-12 md:p-24 flex items-center">
     <div>
@@ -400,4 +318,114 @@ import { siteConfig } from "../config";
       typeNextChar();
     }, 200);
   });
+
+  // Cursor-reactive symbol animation
+  (() => {
+    const heroSection = document.getElementById("hero");
+    const symbolsGroup = document.getElementById("dynamic-symbols");
+    if (!heroSection || !symbolsGroup) return;
+
+    const symbols = ["</>", "{}", "=>", "[]", "<>", "()", "::", "==", "++", ";"];
+    const accentColor = getComputedStyle(heroSection).getPropertyValue("--accent-color").trim();
+
+    // Generate symbols across the viewport
+    const symbolElements: Array<{
+      element: SVGTextElement;
+      baseX: number;
+      baseY: number;
+      baseRotation: number;
+      baseFontSize: number;
+    }> = [];
+
+    const createSymbols = () => {
+      const rect = heroSection.getBoundingClientRect();
+      const cols = Math.ceil(rect.width / 150);
+      const rows = Math.ceil(rect.height / 150);
+
+      symbolsGroup.innerHTML = ""; // Clear existing
+      symbolElements.length = 0;
+
+      for (let i = 0; i < cols; i++) {
+        for (let j = 0; j < rows; j++) {
+          const x = (i * 150) + Math.random() * 100;
+          const y = (j * 150) + Math.random() * 100;
+          const symbol = symbols[Math.floor(Math.random() * symbols.length)];
+          const rotation = Math.random() * 30 - 15;
+          const fontSize = 18 + Math.random() * 8;
+
+          const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+          text.setAttribute("x", x.toString());
+          text.setAttribute("y", y.toString());
+          text.setAttribute("fill", accentColor);
+          text.setAttribute("font-family", "monospace");
+          text.setAttribute("font-size", fontSize.toString());
+          text.setAttribute("transform", `rotate(${rotation} ${x} ${y})`);
+          text.setAttribute("class", "symbol-element");
+          text.textContent = symbol;
+          text.style.transition = "transform 0.3s ease-out, opacity 0.3s ease-out";
+
+          symbolsGroup.appendChild(text);
+          symbolElements.push({
+            element: text,
+            baseX: x,
+            baseY: y,
+            baseRotation: rotation,
+            baseFontSize: fontSize
+          });
+        }
+      }
+    };
+
+    createSymbols();
+
+    // Track cursor and animate symbols
+    let mouseX = 0;
+    let mouseY = 0;
+    let rafId: number;
+
+    const updateSymbols = () => {
+      symbolElements.forEach(({ element, baseX, baseY, baseRotation }) => {
+        const dx = mouseX - baseX;
+        const dy = mouseY - baseY;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        const maxDistance = 200; // Influence radius
+
+        if (distance < maxDistance) {
+          const strength = 1 - (distance / maxDistance);
+          const scale = 1 + (strength * 0.5); // Scale up to 1.5x
+          const pushX = (dx / distance) * strength * -30; // Push away from cursor
+          const pushY = (dy / distance) * strength * -30;
+          const rotationOffset = strength * 20;
+
+          element.style.transform = `
+            translate(${pushX}px, ${pushY}px)
+            rotate(${baseRotation + rotationOffset}deg)
+            scale(${scale})
+          `;
+        } else {
+          element.style.transform = `rotate(${baseRotation}deg) scale(1)`;
+        }
+      });
+    };
+
+    heroSection.addEventListener("mousemove", (e) => {
+      const rect = heroSection.getBoundingClientRect();
+      mouseX = e.clientX - rect.left;
+      mouseY = e.clientY - rect.top;
+
+      if (!rafId) {
+        rafId = requestAnimationFrame(() => {
+          updateSymbols();
+          rafId = 0;
+        });
+      }
+    });
+
+    // Recreate symbols on resize
+    let resizeTimeout: ReturnType<typeof setTimeout>;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(createSymbols, 250);
+    });
+  })();
 </script>
