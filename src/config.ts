@@ -85,7 +85,7 @@ export interface Deliverable {
 export const siteConfig = {
   name: "Faris Abdurrahman",
   title: ["Product Manager", "Project Manager", "Head of Product & Technology"],
-  description: "Portfolio website of Faris Abdurrahman - Product and Project Manager with 5+ years of experience",
+  description: "Portfolio website of Faris Abdurrahman - Product and Project Manager with 7+ years of experience",
   accentColor: "#1d4ed8",
   social: {
     email: "faris@manexus.xyz",
@@ -94,7 +94,7 @@ export const siteConfig = {
     github: "https://github.com/farisqadr",
   },
   aboutMe:
-    "Result driven Product & Project Manager with 5+ years of experience leading innovation in web and app development. Successfully delivered 20+ cross-industry projects by translating business needs into actionable product requirements and driving measurable gains in efficient workflow. Experienced in aligning diverse teams, utilizing AI productivity tools, and managing stakeholders toward product growth vision.",
+    "Result driven Product & Project Manager with 7+ years of experience leading innovation in web and app development. Successfully delivered 20+ cross-industry projects by translating business needs into actionable product requirements and driving measurable gains in efficient workflow. Experienced in aligning diverse teams, utilizing AI productivity tools, and managing stakeholders toward product growth vision.",
   skills: [
     "Product Strategy & Vision",
     "Agile Project Management (Scrum)",
