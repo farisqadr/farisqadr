@@ -90,7 +90,7 @@ export const siteConfig = {
   social: {
     email: "faris@manexus.xyz",
     linkedin: "https://www.linkedin.com/in/faris-abdurrahman/",
-    twitter: "https://x.com/mangfaris",
+    twitter: "https://x.com/techwithfaris",
     github: "https://github.com/farisqadr",
   },
   aboutMe:
