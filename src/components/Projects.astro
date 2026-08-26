@@ -19,113 +19,114 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
           </div>
 
           <div class="lg:col-span-8">
-            {/* Filter Buttons */}
-            <div class="flex flex-wrap gap-2 mb-8" id="project-filters">
-              <button
-                data-filter="all"
-                class="filter-btn px-4 py-2 bg-gray-900 text-white rounded-full text-sm font-medium transition-all duration-300"
-              >
-                All
-              </button>
-              <button
-                data-filter="AI"
-                class="filter-btn px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium transition-all duration-300 hover:bg-gray-200"
-              >
-                AI
-              </button>
-              <button
-                data-filter="Web3"
-                class="filter-btn px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium transition-all duration-300 hover:bg-gray-200"
-              >
-                Web3
-              </button>
-              <button
-                data-filter="Information System"
-                class="filter-btn px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium transition-all duration-300 hover:bg-gray-200"
-              >
-                Information System
-              </button>
-            </div>
-
-            <div class="space-y-8" id="projects-list">
-              {siteConfig.projects.map((project, index) => {
-                const categories = project.category || [];
-                return (
-                  <div
-                    class="group relative"
-                    data-project-index={index}
-                    data-categories={JSON.stringify(categories)}
-                  >
-                    <button
-                      type="button"
-                      data-project-index={index}
-                      class="project-card block w-full text-left relative p-4 sm:p-6 md:p-8 bg-gray-50 rounded-xl sm:rounded-2xl border border-gray-200 transition-all duration-300 hover:bg-white hover:shadow-xl hover:border-gray-300 hover:-translate-y-1 cursor-pointer"
-                    >
-                      <div class="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center bg-gray-900 rounded-full text-white transition-all duration-300 group-hover:bg-gray-700">
-                        <svg
-                          class="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 transition-transform duration-300 group-hover:scale-110"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                          />
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                          />
-                        </svg>
-                      </div>
-
-                      <div class="space-y-4">
-                        <div>
-                          <span
-                            class="text-sm font-mono"
-                            style={{ color: siteConfig.accentColor }}
+                        {/* Filter Buttons */}
+                        <div class="flex flex-wrap gap-2 mb-8" id="project-filters">
+                          <button
+                            data-filter="all"
+                            class="filter-btn px-4 py-2 bg-gray-900 text-white rounded-full text-sm font-medium transition-all duration-300"
                           >
-                            0{index + 1}
-                          </span>
-                          <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
-                            {project.name}
-                          </h3>
-                          {project.thumbnail && (
-                            <div class="mt-4 rounded-lg overflow-hidden border border-gray-200 bg-white">
-                              <img
-                                src={project.thumbnail.src}
-                                alt={`${project.name} thumbnail`}
-                                class="w-full h-40 sm:h-48 object-cover"
-                                loading="lazy"
-                              />
-                            </div>
-                          )}
+                            All
+                          </button>
+                          <button
+                            data-filter="AI"
+                            class="filter-btn px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium transition-all duration-300 hover:bg-gray-200"
+                          >
+                            AI
+                          </button>
+                          <button
+                            data-filter="Web3"
+                            class="filter-btn px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium transition-all duration-300 hover:bg-gray-200"
+                          >
+                            Web3
+                          </button>
+                          <button
+                            data-filter="Information System"
+                            class="filter-btn px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium transition-all duration-300 hover:bg-gray-200"
+                          >
+                            Information System
+                          </button>
                         </div>
 
-                        <p class="text-base sm:text-lg text-gray-600 leading-relaxed pr-12 sm:pr-14 md:pr-16">
-                          {project.description}
-                        </p>
+                        {/* Gallery Grid */}
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+                          {siteConfig.projects.map((project, index) => {
+                            const categories = project.category || [];
+                            return (
+                              <div
+                                class="group relative"
+                                data-project-index={index}
+                                data-categories={JSON.stringify(categories)}
+                              >
+                                <button
+                                  type="button"
+                                  data-project-index={index}
+                                  class="project-card block w-full text-left relative p-4 sm:p-5 md:p-6 bg-gray-50 rounded-xl sm:rounded-2xl border border-gray-200 transition-all duration-300 hover:bg-white hover:shadow-xl hover:border-gray-300 hover:-translate-y-1 cursor-pointer h-full flex flex-col"
+                                >
+                                  <div class="absolute top-3 right-3 sm:top-4 sm:right-4 md:top-5 md:right-5 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center bg-gray-900 rounded-full text-white transition-all duration-300 group-hover:bg-gray-700">
+                                    <svg
+                                      class="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-4.5 md:h-4.5 transition-transform duration-300 group-hover:scale-110"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                                      />
+                                      <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                                      />
+                                    </svg>
+                                  </div>
 
-                        {project.skills && project.skills.length > 0 && (
-                          <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-2">
-                            {project.skills.map((skill) => (
-                              <span class="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-gray-900 text-white rounded-md sm:rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 group-hover:bg-gray-800">
-                                {skill}
-                              </span>
-                            ))}
-                          </div>
-                        )}
+                                  <div class="space-y-3 flex-1 flex flex-col">
+                                    <div>
+                                      <span
+                                        class="text-xs sm:text-sm font-mono"
+                                        style={{ color: siteConfig.accentColor }}
+                                      >
+                                        0{index + 1}
+                                      </span>
+                                      <h3 class="text-lg sm:text-xl font-bold text-gray-900 mt-1 line-clamp-2">
+                                        {project.name}
+                                      </h3>
+                                      {project.thumbnail && (
+                                        <div class="mt-3 rounded-lg overflow-hidden border border-gray-200 bg-white relative flex-shrink-0">
+                                          <img
+                                            src={project.thumbnail.src}
+                                            alt={`${project.name} thumbnail`}
+                                            class="w-full h-40 sm:h-44 md:h-48 object-cover"
+                                            loading="lazy"
+                                          />
+                                        </div>
+                                      )}
+                                    </div>
+
+                                    <p class="text-sm sm:text-base text-gray-600 leading-relaxed line-clamp-3 flex-1">
+                                      {project.description}
+                                    </p>
+
+                                    {project.skills && project.skills.length > 0 && (
+                                      <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-2 border-t border-gray-100">
+                                        {project.skills.map((skill) => (
+                                          <span class="px-2 sm:px-2.5 py-0.5 sm:py-1 bg-gray-900 text-white rounded-md text-xs sm:text-sm font-medium transition-all duration-300 group-hover:bg-gray-800">
+                                            {skill}
+                                          </span>
+                                        ))}
+                                      </div>
+                                    )}
+                                  </div>
+                                </button>
+                              </div>
+                            );
+                          })}
+                        </div>
                       </div>
-                    </button>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
         </div>
       </div>
 
