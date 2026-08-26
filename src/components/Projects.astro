@@ -19,10 +19,43 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
           </div>
 
           <div class="lg:col-span-8">
-            <div class="space-y-8">
+            {/* Filter Buttons */}
+            <div class="flex flex-wrap gap-2 mb-8" id="project-filters">
+              <button
+                data-filter="all"
+                class="filter-btn px-4 py-2 bg-gray-900 text-white rounded-full text-sm font-medium transition-all duration-300"
+              >
+                All
+              </button>
+              <button
+                data-filter="AI"
+                class="filter-btn px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium transition-all duration-300 hover:bg-gray-200"
+              >
+                AI
+              </button>
+              <button
+                data-filter="Web3"
+                class="filter-btn px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium transition-all duration-300 hover:bg-gray-200"
+              >
+                Web3
+              </button>
+              <button
+                data-filter="Information System"
+                class="filter-btn px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium transition-all duration-300 hover:bg-gray-200"
+              >
+                Information System
+              </button>
+            </div>
+
+            <div class="space-y-8" id="projects-list">
               {siteConfig.projects.map((project, index) => {
+                const categories = project.category || [];
                 return (
-                  <div class="group relative">
+                  <div
+                    class="group relative"
+                    data-project-index={index}
+                    data-categories={JSON.stringify(categories)}
+                  >
                     <button
                       type="button"
                       data-project-index={index}
@@ -312,9 +345,43 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
       })),
     })),
   }}
->
+<>
   let currentProject = null;
   let currentImageIndex = 0;
+  let currentFilter = 'all';
+
+  // Filter functionality
+  document.querySelectorAll('.filter-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+      currentFilter = filter;
+
+      // Update button styles
+      document.querySelectorAll('.filter-btn').forEach((b) => {
+        if (b.getAttribute('data-filter') === filter) {
+          b.classList.remove('bg-gray-100', 'text-gray-700', 'hover:bg-gray-200');
+          b.classList.add('bg-gray-900', 'text-white');
+        } else {
+          b.classList.remove('bg-gray-900', 'text-white');
+          b.classList.add('bg-gray-100', 'text-gray-700', 'hover:bg-gray-200');
+        }
+      });
+
+      // Filter projects
+      document.querySelectorAll('[data-project-index]').forEach((projectEl) => {
+        const categoriesStr = projectEl.getAttribute('data-categories');
+        const categories = JSON.parse(categoriesStr);
+        
+        if (filter === 'all' || categories.includes(filter)) {
+          projectEl.style.display = 'block';
+          projectEl.classList.remove('hidden');
+        } else {
+          projectEl.style.display = 'none';
+          projectEl.classList.add('hidden');
+        }
+      });
+    });
+  });
 
   // Open modal
   document.querySelectorAll('.project-card').forEach((card) => {

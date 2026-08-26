@@ -72,6 +72,7 @@ export interface Project {
   tools?: string[];
   teamSize?: number;
   images?: ProjectImage[];
+  category?: string[];
 }
 
 export interface Deliverable {
@@ -123,6 +124,7 @@ export const siteConfig = {
       methodology: "Agile (Scrum)",
       tools: ["Jira", "Figma", "Confluence", "GitHub", "Vercel", "Jam Dev", "Swagger"],
       teamSize: 9,
+      category: ["AI"],
       images: [
         { src: attendanceImages[2], alt: "AI Attendance Dashboard" },
         { src: attendanceImages[1], alt: "QR Code Check-in Interface" },
@@ -147,6 +149,7 @@ export const siteConfig = {
       methodology: "Agile Scrum",
       tools: ["Jira", "Confluence", "Figma", "Grafana", "Jenkins", "GitHub", "AWS", "Swagger"],
       teamSize: 10,
+      category: ["Information System"],
       images: [
         { src: woolImg[1], alt: "B2B Dashboard" },
         { src: woolImg[0], alt: "Wool Appointment" },
@@ -167,6 +170,7 @@ export const siteConfig = {
       methodology: "Agile (Scrum)",
       tools: ["Figma", "Remix IDE", "GitHub"],
       teamSize: 9,
+      category: ["Web3"],
       images: [
         { src: kolektivaImg[0], alt: "Kolektiva Asset Management" },
         { src: kolektivaImg[1], alt: "Tokenized Property List" },
@@ -187,6 +191,7 @@ export const siteConfig = {
       methodology: "Agile Scrum",
       tools: ["Jira", "Figma", "Vercel", "GitHub"],
       teamSize: 7,
+      category: ["Web3", "AI"],
       images: [
         { src: tenzroImg[0], alt: "NFT Digital Collection Mobile" },
         { src: tenzroImg[1], alt: "NFT Profile" },
@@ -210,6 +215,7 @@ export const siteConfig = {
       methodology: "Waterfall",
       tools: ["VS Code", "Ms. SQL Server"],
       teamSize: 6,
+      category: ["Information System"],
       images: [
         { src: thumbnailsImg[7], alt: "Home Page" },
       ],
@@ -228,6 +234,7 @@ export const siteConfig = {
       methodology: "Waterfall",
       tools: ["VS Code"],
       teamSize: 2,
+      category: ["Information System"],
       images: [
         { src: amImages[0], alt: "Dashboard" },
         { src: amImages[1], alt: "DFD" },
@@ -248,6 +255,7 @@ export const siteConfig = {
       methodology: "Agile",
       tools: ["WP Admin", "VS Code", "Canva"],
       teamSize: 2,
+      category: ["Information System"],
       images: [
         { src: thumbnailsImg[6], alt: "Landing Page" },
       ],
